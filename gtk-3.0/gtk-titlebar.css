@@ -1,0 +1,74 @@
+.titlebar {
+	text-shadow: 0 1px @wm_title_shadow;
+
+	/*background-image: linear-gradient(to bottom,
+									  @wm_bg_a,
+									  @wm_bg_b);*/
+	border-radius: 0px;
+}
+
+.titlebar.default-decoration {
+	border: none;
+	box-shadow: none;
+}
+
+.titlebar .title {
+	font: Bold 11;
+}
+
+.titlebar:backdrop {
+	text-shadow: none;
+	background-image: none;
+	background-color: @wm_bg_b;
+}
+
+.titlebar .titlebutton {
+	color: @wm_title;
+	padding: 0px 10px 0px 10px;
+
+	border-radius: 0px;
+	border-width: 1px;
+	border-color: black;
+	border-style: solid;
+}
+
+.titlebar .titlebutton:hover {
+	border-radius: 0px;
+	border-width: 1px;
+	border-color:black;
+	border-style: solid;
+}
+
+.titlebar .titlebutton:active {
+	border-radius: 0px;
+	border-width: 1px;
+	border-color:black;
+	border-style: solid;
+	color: @theme_selected_fg_color;
+}
+
+.titlebar .right .titlebutton:first-child {
+/*    border-left: 1px solid @menu_separator; */
+}
+
+.titlebar .right .titlebutton:last-child {/*Close button*/
+
+}
+.titlebar .right .titlebutton:last-child:hover {
+	background:red;
+}
+
+.titlebar .left .titlebutton:last-child {
+/*    border-right: 1px solid @menu_separator; */
+}
+
+.titlebar .left .titlebutton:first-child {
+
+}
+
+.titlebar .titlebutton:backdrop {
+	background-image: none;
+	color: @wm_unfocused_title;
+	border-image: none;
+	icon-shadow: none;
+}

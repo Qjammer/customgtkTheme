@@ -1,0 +1,10 @@
+[X-GNOME-Metatheme]
+_Name=Adwaita-test
+Type=X-GNOME-Metatheme
+_Comment=There is only one
+Encoding=UTF-8
+GtkTheme=dwaita-test
+MetacityTheme=dwaita-test
+IconTheme=gnome
+CursorTheme=dwaita-test
+CursorSize=24
