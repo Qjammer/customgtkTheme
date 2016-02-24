@@ -2,7 +2,7 @@
 	engine: adwaita;
 	padding: 0;
 
-	background-clip: padding-box;
+	background-clip: border-box;/*Margin of background image/color*/
 
 	-GtkToolButton-icon-spacing: 4;
 

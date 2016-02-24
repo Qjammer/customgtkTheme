@@ -1,0 +1,153 @@
+EphyToolbar .entry:first-child,
+EphyToolbar .entry:focus:first-child,
+EphyToolbar .entry:backdrop:first-child {
+    border-image-width: 3px 0 4px 3px;
+    border-right-width: 0;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+EphyToolbar .entry:last-child,
+EphyToolbar .entry:focus:last-child,
+EphyToolbar .entry:backdrop:last-child {
+    border-image-width: 3px 3px 4px 0;
+    border-left-width: 0;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+EphyToolbar .entry:focus {
+    box-shadow: inset 1px 2px alpha(@theme_selected_bg_color, 0.1),
+                inset 1px 1px alpha(@theme_selected_bg_color, 0.1),
+                inset 0 -1px alpha(@theme_selected_bg_color, 0.2);
+}
+
+EphyToolbar .entry:focus:last-child {
+    box-shadow: inset 0 2px alpha(@theme_selected_bg_color, 0.1),
+                inset 0 1px alpha(@theme_selected_bg_color, 0.1),
+                inset -1px -1px alpha(@theme_selected_bg_color, 0.2);
+}
+
+EphyToolbar .location-entry .button {
+    color: @internal_element_color;
+    -GtkButton-child-displacement-y: 0;
+    border-image-source: -gtk-scaled(url("borders/generic-border.png"),url("borders/generic-border@2.png"));
+    border-image-slice: 3 3 4 3;
+    border-image-repeat: stretch;
+    border-width: 1px 1px 2px 1px;
+    border-radius: 3px;
+    padding-left: 4px;
+    padding-right: 4px;
+    box-shadow: inset 1px 0 @inset_dark_color,
+                inset 0 1px @entry_inset,
+                inset 0 2px alpha(@entry_inset, 0.4);
+}
+
+EphyToolbar .location-entry .button:backdrop,
+EphyToolbar .location-entry .button:backdrop:first-child,
+EphyToolbar .location-entry .button:backdrop:hover,
+EphyToolbar .location-entry .button:backdrop:hover:first-child {
+    border-image-source: -gtk-scaled (url("borders/generic-border-backdrop.png"),url("borders/generic-border-backdrop@2.png"));
+    box-shadow: none;
+    background-image: none;
+    background-color: @theme_unfocused_base_color;
+}
+
+EphyToolbar .location-entry .button:last-child {
+    border-image-width: 3px 3px 4px 0;
+    border-left-width: 0;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+EphyToolbar .location-entry .button:first-child {
+    border-image-width: 3px 0 4px 3px;
+    border-right-width: 0;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    /* flip the box-shadow division*/
+    box-shadow: inset -1px 0 @inset_dark_color,
+                inset 0 1px @entry_inset,
+                inset 0 2px alpha(@entry_inset, 0.4);
+}
+
+EphyToolbar .location-entry .button,
+EphyToolbar .location-entry .button:hover {
+    icon-shadow: none;
+    background-image: -gtk-gradient(linear,
+                                    left top, left bottom,
+                                    from(@entry_background_a),
+                                    to(@entry_background_b));
+}
+
+EphyToolbar .location-entry .button:active,
+EphyToolbar .location-entry .button:active:hover {
+    background-image: -gtk-gradient(linear,
+                                    left top, left bottom,
+                                    from(shade(@entry_background_a, 0.9)),
+                                    to(@entry_background_b));
+}
+
+EphyToolbar .location-entry .button:hover,
+EphyToolbar .location-entry .button:active {
+    color: @theme_text_color;
+}
+
+EphyNotebook.notebook {
+    border-width: 1px 0 1px 0;
+}
+
+EphyNotebook.notebook tab {
+    border-width: 0;
+}
+
+EphyToolbar.toolbar .button {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+#ephy-page-menu-button.active-menu {
+    background-image: none;
+    background-color: @menu_bg_color;
+
+    border-image: none;
+    border-color: @menu_bg_color;
+    border-radius: 4px 4px 0 0;
+}
+
+EphyOverview GtkScrolledWindow {
+    background-color: @theme_base_color;
+}
+
+EphyOverview GtkScrolledWindow:backdrop {
+    background-color: @theme_unfocused_base_color;
+}
+
+/* sets top and bottom borders on the main scrolled window for toolbar visual
+ * division and search/downloadbar */
+EphyWindow.background EphyEmbed.vertical GtkScrolledWindow.frame {
+    border-color: @borders;
+    border-width: 1px 0;
+    border-radius: 0;
+}
+
+/* removes any border from the overview scrolled window, since it's overlaid */
+EphyWindow.background EphyEmbed.vertical EphyOverview .documents-scrolledwin {
+    border-style: none;
+}
+
+/* remove top and bottom borders from the main scrolled window when inside a notebook tab */
+EphyWindow.background EphyNotebook.notebook EphyEmbed.vertical GtkScrolledWindow {
+    border-top-width: 0;
+    border-bottom-width: 0;
+}
+
+/* remove bottom borders from the  main scrolled window when no bars at the bottom of the screen are shown */
+EphyWindow.background EphyNotebook:last-child EphyEmbed.vertical GtkScrolledWindow,
+EphyWindow.background EphyNotebook.notebook:last-child {
+    border-bottom-width: 0;
+}
