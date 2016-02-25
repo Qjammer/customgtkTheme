@@ -69,14 +69,7 @@
 }
 
 /* Prelit button on primary toolbar background */
-.primary-toolbar .button:hover {
-    background-color: transparent;
-    background-image: linear-gradient(to bottom,
-				      alpha(@toolbar_button_prelight, 0),
-                                      @toolbar_button_prelight 54%,
-                                      alpha(@toolbar_button_prelight, 0)
-                                      );
-}
+
 
 /* Insensitive button background */
 .button:insensitive,
@@ -200,7 +193,7 @@ GtkComboBox.combobox-entry .button:insensitive:backdrop,
 
 
 /* Primary and inline toolbars background */
-.primary-toolbar .toolbar,
+/*.primary-toolbar .toolbar,
 .primary-toolbar.toolbar,
 .inline-toolbar.toolbar  {
     background-image: linear-gradient(to bottom,
@@ -209,7 +202,9 @@ GtkComboBox.combobox-entry .button:insensitive:backdrop,
                                       @toolbar_gradient_c
                                       );
     background-color: transparent;
-}
+}*/
+
+@import url("gtk-toolbar.css");
 
 .primary-toolbar .toolbar.vertical,
 .primary-toolbar.toolbar.vertical,
@@ -223,12 +218,7 @@ GtkComboBox.combobox-entry .button:insensitive:backdrop,
 }
 
 /* Unfocused window primary and inline toolbars background */
-.primary-toolbar .toolbar:backdrop,
-.primary-toolbar.toolbar:backdrop,
-.inline-toolbar.toolbar:backdrop  {
-    background-image: none;
-    background-color: @unfocused_dark_bg;
-}
+
 
 .scale.trough {
     background-image: linear-gradient(to bottom,

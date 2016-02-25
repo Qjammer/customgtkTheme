@@ -1,6 +1,6 @@
 * {
 	engine: adwaita;
-	padding: 0;
+	/*padding: 0;*/
 
 	background-clip: padding-box;/*Margin of background image/color*/
 
@@ -47,9 +47,9 @@
 	 * to the adwaita engine: using real CSS properties is faster,
 	 * and we don't use any outlines for now.
 	 */
-	outline-color: alpha(@theme_text_color, 0.3);
+	/*outline-color: alpha(@theme_text_color, 0.3);
 	outline-style: dashed;
-	outline-offset: 2px;
+	outline-offset: 2px;*/
 }
 
 /***************
@@ -165,9 +165,6 @@ GtkLabel:insensitive {
 
 @import url("gtk-spinner.css");
 
-.button .spinner:active {
-	color: @theme_fg_color;
-}
 @import url("gtk-floating-bar.css");
 
 
@@ -712,8 +709,8 @@ GtkComboBox.combobox-entry .button {
 .primary-toolbar .button:active,
 .inline-toolbar .button:active,
 .button:active {
-	color: @button_active_text;
-	text-shadow: 0 1px @button_active_text_shadow;
+	/*color: @button_active_text;*/
+	/*text-shadow: 0 1px @button_active_text_shadow;*/
 }
 
 .button:insensitive,
@@ -1477,7 +1474,7 @@ GtkComboBox {
 	-GtkComboBox-arrow-scaling: 0.5;
 	-GtkComboBox-shadow-type: none;
 
-	text-shadow: 0 1px @button_text_shadow;
+	/*text-shadow: 0 1px @button_text_shadow;*/
 }
 
 GtkComboBox:backdrop {
@@ -1620,29 +1617,7 @@ GtkCheckButton:selected:focus {
 /************
  * Toolbars *
  ************/
-.toolbar {
-	border-style: none;
-	border-color: darker (@theme_bg_color);
-	padding: 6px;
-	background-color: @theme_bg_color;
-}
-
-.toolbar .button {
-	padding: 1px;
-}
-
-.toolbar .button.text-button {
-	padding: 2px 16px;
-}
-
-.toolbar .button.image-button {
-	padding: 5px 4px 4px 5px;
-}
-
-.toolbar:insensitive {
-	color: alpha (@theme_fg_color, 0.6);
-	background-color: @insensitive_bg_color;
-}
+@import url("gtk-toolbar.css");
 
 /********************
  * Menubar Toolbars *

@@ -1,3 +1,5 @@
+@define-color close_button_color #AA0000;
+
 /************
  **TITLEBAR**
  ************/
@@ -26,8 +28,6 @@
 
 .titlebar:backdrop,
 .header-bar:backdrop {
-	text-shadow: none;
-	background-image: none;
 	/*background-color: @wm_bg_b;*/
 }
 
@@ -55,13 +55,14 @@
 }
 
 .titlebar .right .titlebutton:last-child {/*Close button*/
-
 }
 .titlebar .right .titlebutton:last-child:hover {
-	background-color:red;
+	-gtk-image-effect:highlight;
+	background-color:@close_button_color;
 }
 
 .titlebar .left .titlebutton:last-child {
+
 /*    border-right: 1px solid @menu_separator; */
 }
 

@@ -1,0 +1,34 @@
+.toolbar {
+
+    background-image: none;
+	border-style: none;
+	border-color: darker (@theme_bg_color);
+	padding: 2px;
+	background-color: @theme_bg_color;
+}
+
+.toolbar .button {
+	/*padding: 1px;*/
+}
+
+.toolbar .button.text-button {
+	/*padding: 2px 16px;*/
+}
+
+.toolbar .button.image-button {
+	padding: 5px 4px 4px 5px;
+}
+
+.toolbar:insensitive {
+	color: alpha (@theme_fg_color, 0.6);
+	background-color: @insensitive_bg_color;
+}
+
+.primary-toolbar .button:hover {
+    background-color: transparent;
+    background-image: linear-gradient(to bottom,
+				      alpha(@toolbar_button_prelight, 0),
+                                      @toolbar_button_prelight 54%,
+                                      alpha(@toolbar_button_prelight, 0)
+                                      );
+}

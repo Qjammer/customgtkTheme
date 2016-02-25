@@ -108,3 +108,7 @@
 					  -gtk-gradient(radial, center center, 0, center center, 0.5, to(currentColor), to(transparent));
 	animation: spinner 1s infinite linear;
 }
+
+.button .spinner:active {
+	color: @theme_fg_color;
+}
