@@ -72,14 +72,14 @@
 
 
 /* Insensitive button background */
-.button:insensitive,
+/*.button:insensitive,
 .spinbutton.vertical .button:insensitive,
 .toolbar GtkComboBox .button:insensitive,
 .toolbar .button.raised:insensitive,
 .toolbar .raised .button:insensitive {
     background-image: none;
     background-color: @insensitive_bg_color;
-}
+}*/
 
 /* Pushed + Insensitive button background */
 .button:active:insensitive,
@@ -117,7 +117,7 @@
 .button:insensitive:backdrop,
 .toolbar .button:insensitive:backdrop {
     background-image: none;
-    background-color: @unfocused_insensitive_bg_color;
+    /*background-color: @theme_bg_insensitive_color;*/
 }
 
 .button:insensitive:active:backdrop {
@@ -132,12 +132,12 @@ GtkComboBox.combobox-entry .button:hover,
 .primary-toolbar GtkComboBox.combobox-entry .button,
 .primary-toolbar GtkComboBox.combobox-entry .button:hover,
 .level-bar.trough {
-    background-image: linear-gradient(to bottom,
+    /*background-image: linear-gradient(to bottom,
                                       @entry_background_a,
                                       @entry_background_b
                                       );
     box-shadow: inset 0 1px @entry_inset,
-                inset 0 2px alpha(@entry_inset, 0.4);
+                inset 0 2px alpha(@entry_inset, 0.4);*/
 }
 
 /* Entry pushed button background */
@@ -160,13 +160,13 @@ column-header .button:active:hover {
 }
 
 /* Insensitive entry background */
-.entry:insensitive,
+/*.entry:insensitive,
 GtkComboBox.combobox-entry .button:insensitive,
 .level-bar.trough:insensitive {
     background-color: @insensitive_bg_color;
     background-image: none;
     box-shadow: none;
-}
+}*/
 
 /* Unfocused windows entry background */
 .entry:backdrop,
@@ -177,19 +177,19 @@ column-header.button:insensitive:backdrop,
 column-header .button:insensitive:backdrop,
 .level-bar.trough:backdrop,
 .spinbutton.vertical.entry:backdrop {
-    background-image: none;
+    /*background-image: none;
     background-color: @theme_unfocused_base_color;
-    box-shadow: none;
+    box-shadow: none;*/
 }
 
 /* Unfocused windows insensitive entry background */
-.entry:insensitive:backdrop,
+/*.entry:insensitive:backdrop,
 GtkComboBox.combobox-entry .button:insensitive:backdrop,
 .level-bar.trough:insensitive:backdrop,
 .spinbutton.vertical.entry:insensitive:backdrop {
     background-image: none;
     background-color: @unfocused_insensitive_bg_color;
-}
+}*/
 
 
 /* Primary and inline toolbars background */

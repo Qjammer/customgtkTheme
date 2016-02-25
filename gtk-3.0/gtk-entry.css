@@ -1,3 +1,6 @@
+@define-color entry_bg_color shade(@theme_bg_color,1.5);
+@define-color entry_bg_focus_color shade(@entry_bg_color,1.5);
+
 .entry {
 	border-style: solid;
 	padding: 4px;
@@ -5,7 +8,7 @@
 	/* border-image defined in the -assets variants */
 
 	color: @entry_text_color;
-	background-color: @theme_base_color;
+	background-color: @entry_bg_color;
 	transition: all 200ms ease-out;
 }
 
@@ -14,6 +17,7 @@
 				inset 1px 1px alpha(@theme_selected_bg_color, 0.1),
 				inset -1px -1px alpha(@theme_selected_bg_color, 0.2);
 	transition: all 200ms ease-in;
+	background-color: @entry_bg_focus_color;
 }
 
 .entry.progressbar,
@@ -67,18 +71,23 @@
 }
 
 .entry:insensitive {
-	color: @insensitive_fg_color;
+	background-color: @theme_bg_insensitive_color;
+	color: @theme_text_insensitive_color;
 }
 
 .entry:backdrop {
-	color: @theme_unfocused_text_color;
+	/*color: @theme_unfocused_text_color;*/
 }
 
 .entry:insensitive:backdrop {
-	color: @unfocused_insensitive_fg_color;
+	color: @theme_text_insensitive_color;
+}
+
+.entry:insensitive:backdrop {
+	/*color: @unfocused_insensitive_fg_color;*/
 }
 
 .entry:selected:backdrop {
-	color: @theme_unfocused_selected_fg_color;
-	background-color: @theme_unfocused_selected_bg_color
+	/*color: @theme_unfocused_selected_fg_color;*/
+	/*background-color: @theme_unfocused_selected_bg_color*/
 }

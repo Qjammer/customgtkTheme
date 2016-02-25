@@ -39,11 +39,11 @@ GtkComboBox.combobox-entry .entry:focus,
 .button.default:active,
 .inline-toolbar.toolbar.vertical .button.default:active,
 GtkSwitch.trough:active {
-    border-image: -gtk-scaled(url("borders/generic-border-focused.png"),url("borders/generic-border-focused@2.png")) 3 3 4 3 / 3px 3px 4px 3px stretch;
+   /* border-image: -gtk-scaled(url("borders/generic-border-focused.png"),url("borders/generic-border-focused@2.png")) 3 3 4 3 / 3px 3px 4px 3px stretch;
     border-radius: 3px;
     border-width: 1px 1px 2px 1px;
     border-style: solid;
-    border-color: transparent;
+    border-color: transparent;*/
 }
 
 /* generic button borders */

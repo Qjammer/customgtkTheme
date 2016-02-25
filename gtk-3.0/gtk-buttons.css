@@ -1,6 +1,6 @@
 @define-color button_text_unchecked_color @theme_text_color;
 @define-color button_marker_unchecked_color shade(@theme_base_color,2.0);
-@define-color button_background_unchecked_color @theme_bg_color;
+@define-color button_background_unchecked_color shade(@theme_bg_color,0.5);
 
 @define-color button_text_hover_color shade(@button_text_unchecked_color,1.5);
 @define-color button_background_hover_color mix(@theme_bg_color,@theme_highlight_color,0.5);
@@ -10,17 +10,23 @@
 
 @define-color button_text_checked_color mix(@theme_text_color,@theme_highlight_color,0.2);
 @define-color button_marker_checked_color shade(@theme_highlight_color,1.0);
-@define-color button_background_checked_color @theme_bg_color;
+@define-color button_background_checked_color @button_background_unchecked_color;
 
 @define-color button_text_active_shadow @button_text_hover_color;
 
-.button{
+@define-color button_marker_default_color #0066FF;
+
+@define-color button_text_insensitive_color shade(@button_text_unchecked_color,0.5);
+@define-color button_bg_insensitive_color shade(@button_background_unchecked_color,1.75);
+
+.button,
+.text-button{
 	padding: 0px 10px;
 	border-bottom-style: solid;
 	border-width: 0px;
 	border-bottom-width: 2px;
 	border-color: transparent;
-	margin: 1px;
+	/*margin: 1px;*/
 	font-weight:bold;
 
 
@@ -30,32 +36,37 @@
 
 }
 
-.button:hover{
+.button:hover,
+.text-button:hover{
 	color:@button_text_hover_color;
 	border-bottom-color: @button_marker_unchecked_color;
 	background-color:@button_background_hover_color;
 }
 
-.button:active{
+.button:active,
+.text-button:active{
 	color:@button_text_active_color;
 	border-bottom-color:@button_marker_checked_color;
 	background-color:@button_background_active_color;
 	text-shadow:1px 1px @button_text_active_shadow;
 }
 
-.button:checked{
+.button:checked,
+.text-button:checked{
 	color:@button_text_checked_color;
 	border-bottom-color: @button_marker_checked_color;
 	background-color:@button_background_checked_color;
 }
 
-.button:checked:hover{
+.button:checked:hover,
+.text-button:checked:hover{
 	color:@button_text_checked_color;
 	border-bottom-color: @button_marker_checked_color;
 	background-color:@button_background_hover_color;
 }
 
-.button:checked:active{
+.button:checked:active,
+.text-button:checked:active{
 	color:@button_text_active_color;
 	border-bottom-color:@button_marker_unchecked_color;
 	background-color:@button_background_active_color;
@@ -63,9 +74,19 @@
 }
 
 .button.default {/*Default button to press*/
-
+	border-bottom-color:@button_marker_default_color;
 }
 
-.button.image-button{
-	padding: 1px;
+.image-button{
+	padding: 0px 3px;
 }
+
+.button:insensitive,
+.text-button:insensitive,
+.button:checked:insensitive,
+.text-button:checked:insensitive {
+	/* I want everything nice and flat in the unfocused window */
+	color: @button_text_insensitive_color;
+	background-color:@button_bg_insensitive_color;
+}
+
