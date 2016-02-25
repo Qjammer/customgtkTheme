@@ -9,7 +9,7 @@
                                       @button_gradient_color_b 40%,
                                       @button_gradient_color_c
                                       );*/
-    background-color: transparent;
+    /*background-color: transparent;*/
 }
 
 /* Pushed button and progressbar through background */
@@ -27,11 +27,11 @@
 .trough.highlight,
 .trough row,
 .trough row:hover {
-    background-image: linear-gradient(to bottom,
+    /*background-image: linear-gradient(to bottom,
                                       @borders,
                                       shade(@theme_bg_color, 0.95)
-                                      );
-    background-color: transparent;
+                                      );*/
+    /*background-color: transparent;*/
 }
 
 /* Flipped pushed button background for vertical progressbar through and the like */
@@ -62,10 +62,10 @@
 .toolbar GtkComboBox .button:hover,
 .spinbutton.vertical .button:hover {
     background-color: transparent;
-    background-image: linear-gradient(to bottom,
+    /*background-image: linear-gradient(to bottom,
 				      @button_hover_gradient_color_a,
                                       @button_hover_gradient_color_b
-                                      );
+                                      );*/
 }
 
 /* Prelit button on primary toolbar background */

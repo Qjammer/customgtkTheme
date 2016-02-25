@@ -19,10 +19,10 @@ GtkSwitch.trough:active:insensitive,
 .titlebar .titlebutton:hover,
 .titlebar .titlebutton:active {
     /*border-image: -gtk-scaled(url("borders/generic-border.png"),url("borders/generic-border@2.png")) 3 3 4 3 / 3px 3px 4px 3px stretch;*/
-    border-radius: 0px;
+    /*border-radius: 0px;
     border-width: 1px;
     border-color:black;
-    border-style: solid;
+    border-style: solid;*/
 }
 
 .trough row {
@@ -51,10 +51,10 @@ GtkSwitch.trough:active {
 .spinbutton.vertical .button,
 .inline-toolbar.toolbar.vertical .button {
     /*border-image: -gtk-scaled(url("borders/button-border.png"),url("borders/button-border@2.png")) 3 3 4 3 / 3px 3px 4px 3px stretch;*/
-    border-radius: 3px;
+   /* border-radius: 3px;
     border-width: 1px 1px 2px 1px;
     border-style: solid;
-    border-color: transparent;
+    border-color: transparent;*/
 }
 
 /* focused button borders */

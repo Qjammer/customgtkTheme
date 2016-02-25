@@ -1,0 +1,61 @@
+@define-color button_text_unchecked_color @theme_text_color;
+@define-color button_marker_unchecked_color shade(@theme_base_color,2.0);
+@define-color button_background_unchecked_color @theme_bg_color;
+
+@define-color button_text_hover_color shade(@button_text_unchecked_color,1.5);
+@define-color button_background_hover_color mix(@theme_bg_color,@theme_highlight_color,0.5);
+
+@define-color button_text_active_color @button_text_hover_color;
+@define-color button_background_active_color mix(@theme_bg_color,@theme_highlight_color,0.7);
+
+@define-color button_text_checked_color mix(@theme_text_color,@theme_highlight_color,0.2);
+@define-color button_marker_checked_color shade(@theme_highlight_color,1.0);
+@define-color button_background_checked_color @theme_bg_color;
+
+.button{
+	padding: 0px 10px;
+	border-style: solid;
+	border-width: 1px;
+	border-bottom-width: 2px;
+	border-color: transparent;
+	margin: 1px;
+	font:bold;
+
+
+	color:@button_text_unchecked_color;
+	border-bottom-color: @button_marker_unchecked_color;
+	background-color:@button_background_unchecked_color;
+
+}
+
+.button:hover{
+	color:@button_text_hover_color;
+	border-bottom-color: @button_marker_unchecked_color;
+	background-color:@button_background_hover_color;
+}
+
+.button:active{
+	color:@button_text_active_color;
+	border-bottom-color:@button_marker_checked_color;
+	background-color:@button_background_active_color;
+	text-shadow:0 1px @button_active_text_shadow;
+}
+
+.button:checked{
+	color:@button_text_checked_color;
+	border-bottom-color: @button_marker_checked_color;
+	background-color:@button_background_checked_color;
+}
+
+.button:checked:hover{
+	color:@button_text_checked_color;
+	border-bottom-color: @button_marker_checked_color;
+	background-color:@button_background_hover_color;
+}
+
+.button:checked:active{
+	color:@button_text_active_color;
+	border-bottom-color:@button_marker_unchecked_color;
+	background-color:@button_background_active_color;
+	text-shadow:0 1px @button_active_text_shadow;
+}

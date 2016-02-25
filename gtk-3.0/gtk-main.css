@@ -1,15 +1,14 @@
 /* Default color scheme */
 @define-color theme_base_color #222222; /*Dark grey*/
 @define-color theme_highlight_color #FCAF3E; /*Orange*/
-@define-color theme_bg_color #222222;
-@define-color theme_selected_bg_color #4a90d9;
-@define-color theme_text_color #7B7B7B; /*Light grey*/
-@define-color theme_text_title_color @theme_highlight_color; /*Top bar color*/
-@define-color theme_selected_text_color @theme_highlight_color; /*Top bar color*/
-
-
 @define-color theme_fg_color @theme_text_color;
-@define-color theme_selected_fg_color #ffffff;
+@define-color theme_selected_fg_color shade(@theme_fg_color,1.5);
+@define-color theme_bg_color #111111;
+@define-color theme_bg_selected_color shade(@theme_bg_color,0.5);
+@define-color theme_text_color #7B7B7B; /*Light grey*/
+@define-color theme_text_selected_color @theme_highlight_color;
+@define-color theme_text_title_color @theme_highlight_color; /*Top bar title color*/
+
 
 @define-color placeholder_text_color shade(@text_color, 3.5);
 
