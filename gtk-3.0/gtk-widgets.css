@@ -102,9 +102,9 @@ GtkClutterOffscreen {
 }*/
 
 /* Apply effects to insensitive and prelit images */
-*:insensitive {
+/**:insensitive {
 	-gtk-image-effect: dim;
-}
+}*/
 
 *:hover {
 	-gtk-image-effect: highlight;
@@ -210,7 +210,7 @@ GtkTreeView.separator:backdrop,
 .separator:backdrop,
 .separator:hover:backdrop,
 .toolbar .separator:backdrop {
-	color: @unfocused_insensitive_borders;
+	/*color: @unfocused_insensitive_borders;*/
 }
 
 .pane-separator {
@@ -680,14 +680,14 @@ GtkComboBox.combobox-entry .button {
 }
 
 /* We may want a background for focused buttons, but in the meantime let's remove it too */
-.primary-toolbar .button,
+/*.primary-toolbar .button,
 .primary-toolbar .button:insensitive,
 .primary-toolbar .button:backdrop,
 .primary-toolbar .button:hover:backdrop,
 .primary-toolbar .button:insensitive:backdrop {
 	background-image: none;
 	background-color: transparent;
-}
+}*/
 
 /* Remove borders from primary toolbar buttons*/
 /*.primary-toolbar .button {
@@ -703,9 +703,9 @@ GtkComboBox.combobox-entry .button {
 	text-shadow: 0 1px @primary_toolbar_button_text_shadow;
 }*/
 
-.primary-toolbar.toolbar .button.image-button {
+/*.primary-toolbar.toolbar .button.image-button {
 	padding: 3px 4px 4px;
-}
+}*/
 
 .primary-toolbar .button:active,
 .inline-toolbar .button:active,
@@ -731,7 +731,7 @@ GtkComboBox.combobox-entry .button {
 	icon-shadow: none;
 }*/
 
-.toolbar .button.raised,
+/*.toolbar .button.raised,
 .toolbar .raised .button,
 .inline-toolbar .button {
 	icon-shadow: 0 1px @button_text_shadow;
@@ -743,9 +743,9 @@ GtkComboBox.combobox-entry .button {
 .inline-toolbar .button:active {
 	icon-shadow: 0 1px @button_active_text_shadow;
 	text-shadow: 0 1px @button_active_text_shadow;
-}
+}*/
 
-.toolbar .button.raised:insensitive,
+/*.toolbar .button.raised:insensitive,
 .toolbar .raised .button:insensitive,
 .inline-toolbar .button:insensitive {
 	icon-shadow: none;
@@ -757,12 +757,12 @@ GtkComboBox.combobox-entry .button {
 .inline-toolbar .button:backdrop {
 	text-shadow: none;
 	icon-shadow: none;
-}
+}*/
 
 /* linked entries/buttons */
 
 /* Set up shadows and hilights for button visual separation */
-.linked .entry {
+/*.linked .entry {
 	box-shadow: inset -1px 0 @inset_dark_color;
 }
 
@@ -789,7 +789,7 @@ GtkComboBox.combobox-entry .button {
 				inset 1px 1px alpha(@theme_selected_bg_color, 0.1),
 				inset -1px -1px alpha(@theme_selected_bg_color, 0.2);
 
-}
+}*/
 
 /* Set up shadows and hilights for button visual separation */
 .linked .button,
@@ -797,7 +797,7 @@ GtkComboBox.combobox-entry .button {
 .toolbar .raised.linked .button,
 .inline-toolbar.toolbar .button,
 .inline-toolbar.toolbar GtkToolButton > .button {
-	box-shadow: inset 1px 0 @inset_light_color, inset -1px 0 @inset_dark_color;
+	/*box-shadow: inset 1px 0 @inset_light_color, inset -1px 0 @inset_dark_color;*/
 }
 
 .linked .button:first-child,
@@ -805,7 +805,7 @@ GtkComboBox.combobox-entry .button {
 .toolbar .raised.linked .button:first-child,
 .inline-toolbar.toolbar .button:first-child,
 .inline-toolbar.toolbar GtkToolButton:first-child > .button {
-	box-shadow: inset -1px 0 @inset_dark_color;
+	/*box-shadow: inset -1px 0 @inset_dark_color;*/
 }
 
 .linked .button:last-child,
@@ -813,7 +813,7 @@ GtkComboBox.combobox-entry .button {
 .toolbar .raised.linked .button:last-child,
 .inline-toolbar.toolbar .button:last-child,
 .inline-toolbar.toolbar GtkToolButton:last-child > .button {
-	box-shadow: inset 1px 0 @inset_light_color;
+	/*box-shadow: inset 1px 0 @inset_light_color;*/
 }
 
 .linked .button:active,
@@ -821,7 +821,7 @@ GtkComboBox.combobox-entry .button {
 .toolbar .raised.linked .button:active,
 .inline-toolbar.toolbar .button:active,
 .inline-toolbar.toolbar GtkToolButton > .button:active {
-	box-shadow: inset 1px 0 @inset_dark_color;
+	/*box-shadow: inset 1px 0 @inset_dark_color;*/
 }
 
 .linked .button:insensitive,
@@ -829,7 +829,7 @@ GtkComboBox.combobox-entry .button {
 .toolbar .raised.linked .button:insensitive,
 .inline-toolbar.toolbar .button:insensitive,
 .inline-toolbar.toolbar GtkToolButton > .button:insensitive {
-	box-shadow: inset -1px 0 @inset_dark_color;
+	/*box-shadow: inset -1px 0 @inset_dark_color;*/
 }
 
 .linked .button:backdrop,
@@ -837,7 +837,7 @@ GtkComboBox.combobox-entry .button {
 .toolbar .raised.linked .button:backdrop,
 .inline-toolbar.toolbar .button:backdrop,
 .inline-toolbar.toolbar GtkToolButton > .button:backdrop {
-	box-shadow: inset -1px 0 @unfocused_borders;
+	/*box-shadow: inset -1px 0 @unfocused_borders;*/
 }
 
 .linked .button:insensitive:backdrop,
@@ -845,7 +845,7 @@ GtkComboBox.combobox-entry .button {
 .toolbar .raised.linked .button:insensitive:backdrop,
 .inline-toolbar.toolbar .button:insensitive:backdrop,
 .inline-toolbar.toolbar GtkToolButton > .button:insensitive:backdrop {
-	box-shadow: inset -1px 0 @unfocused_insensitive_borders;
+	/*box-shadow: inset -1px 0 @unfocused_insensitive_borders;*/
 }
 
 /* remove box shadow from last-child and only-child */
@@ -877,11 +877,11 @@ GtkComboBox.combobox-entry .button {
 .inline-toolbar.toolbar GtkToolButton:only-child > .button,
 .inline-toolbar.toolbar GtkToolButton:only-child > .button:backdrop,
 .inline-toolbar.toolbar GtkToolButton:only-child > .button:backdrop:insensitive {
-	box-shadow: none;
+	/*box-shadow: none;*/
 }
 
 /* Middle button */
-.linked .entry,
+/*.linked .entry,
 .linked .button,
 .linked .button:active,
 .linked .button:active:hover,
@@ -890,10 +890,10 @@ GtkComboBox.combobox-entry .button {
 	border-left-width: 0;
 	border-image-width: 3px 0 4px 0;
 	border-radius: 0;
-}
+}*/
 
 /* Leftmost button */
-.linked .entry:first-child,
+/*.linked .entry:first-child,
 .linked .button:first-child,
 .linked .button:active:first-child,
 .linked .button:active:hover:first-child,
@@ -902,7 +902,7 @@ GtkComboBox.combobox-entry .button {
 	border-image-width: 3px 0 4px 3px;
 	border-bottom-right-radius: 0;
 	border-top-right-radius: 0;
-}
+}*/
 
 /* Rightmost button */
 /*.linked .entry:last-child,
@@ -975,7 +975,7 @@ GtkComboBox.combobox-entry .button {
 }*/
 
 /* Linked button shadows (vertical) */
-.linked.vertical .button,
+/*.linked.vertical .button,
 .inline-toolbar.toolbar.vertical .button,
 .inline-toolbar.toolbar.vertical GtkToolButton > .button {
 	box-shadow: inset 0 1px @inset_light_color, inset 0 -1px @inset_dark_color;
@@ -1015,7 +1015,7 @@ GtkComboBox.combobox-entry .button {
 .inline-toolbar.toolbar.vertical .button:insensitive:backdrop,
 .inline-toolbar.toolbar.vertical GtkToolButton > .button:insensitive:backdrop {
 	box-shadow: inset 0 -1px @unfocused_insensitive_borders;
-}
+}*/
 
 .linked.vertical .button:only-child,
 .linked.vertical .button:backdrop:last-child,
@@ -1035,7 +1035,7 @@ GtkComboBox.combobox-entry .button {
 .inline-toolbar.toolbar.vertical GtkToolButton:only-child > .button,
 .inline-toolbar.toolbar.vertical GtkToolButton:only-child > .button:backdrop,
 .inline-toolbar.toolbar.vertical GtkToolButton:only-child > .button:backdrop:insensitive {
-	box-shadow: none;
+	/*box-shadow: none;*/
 }
 
 /* Linked buttons on primary toolbars */
@@ -1646,10 +1646,10 @@ GtkCheckButton:selected:focus {
  */
 .primary-toolbar .toolbar,
 .primary-toolbar.toolbar {
-	border-width: 1px 0;
+	/*border-width: 1px 0;
 	border-style: solid;
 	border-top-color: @toolbar_border_top;
-	border-bottom-color: @toolbar_border_bottom;
+	border-bottom-color: @toolbar_border_bottom;*/
 
 	-GtkWidget-window-dragging: true;
 	-GtkToolbar-button-relief: normal;
@@ -1670,7 +1670,7 @@ GtkCheckButton:selected:focus {
 
 .primary-toolbar .toolbar:backdrop,
 .primary-toolbar.toolbar:backdrop {
-	border-color: @unfocused_borders;
+	/*border-color: @unfocused_borders;*/
 	box-shadow: none;
 	text-shadow: none;
 }
@@ -2553,10 +2553,10 @@ GtkIconView.cell:selected:focus {
 	color: @insensitive_fg_color;
 }
 
-.view:backdrop {
+/*.view:backdrop {
 	background-color: @theme_unfocused_base_color;
 	color: @theme_unfocused_text_color;
-}
+}*/
 
 .view:selected {
 	background-color: @theme_selected_bg_color;
@@ -2601,11 +2601,11 @@ column-header .button:hover {
 	icon-shadow: none;
 	font-weight: bold; /* Not sure about this one */
 }
-
+/*
 column-header.button:backdrop,
 column-header .button:backdrop {
 	background-color: @theme_unfocused_base_color;
-}
+}*/
 
 column-header.button:insensitive,
 column-header .button:insensitive {

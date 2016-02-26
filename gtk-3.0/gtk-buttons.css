@@ -23,9 +23,9 @@
 .text-button{
 	padding: 0px 10px;
 	border-bottom-style: solid;
-	border-width: 0px;
+	/*border-width: 0px;*/
 	border-bottom-width: 2px;
-	border-color: transparent;
+	/*border-color: transparent;*/
 	/*margin: 1px;*/
 	font-weight:bold;
 
@@ -89,4 +89,24 @@
 	color: @button_text_insensitive_color;
 	background-color:@button_bg_insensitive_color;
 }
+
+GtkCheckButton.text-button{
+	border-width:2px;
+	border-style:solid;
+
+	border-color:@button_marker_unchecked_color;
+}
+
+GtkCheckButton.text-button:checked{
+	border-color:@button_marker_checked_color;
+}
+
+gtkCheckButton.text-button:insensitive{
+	border-width:2px;
+	border-style:solid;
+	border-color:@button_text_insensitive_color;
+}
+
+
+
 

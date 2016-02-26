@@ -76,7 +76,7 @@ GtkSwitch.trough:active {
 }
 
 /* primary toolbar - generic element borders */
-.primary-toolbar .entry,
+/*.primary-toolbar .entry,
 .primary-toolbar GtkComboBox.combobox-entry .entry,
 .primary-toolbar GtkComboBox.combobox-entry .button,
 .primary-toolbar .button:active,
@@ -99,10 +99,10 @@ GtkSwitch.trough:active {
     border-width: 2px;
     border-style: solid;
     border-color: transparent;
-}
+}*/
 
 /* primary toolbar - focused element borders */
-.primary-toolbar .entry:focus,
+/*.primary-toolbar .entry:focus,
 .primary-toolbar GtkComboBox.combobox-entry .entry:focus,
 .primary-toolbar .button.raised.default:active,
 .primary-toolbar .raised .button.default:active,
@@ -112,7 +112,7 @@ GtkSwitch.trough:active {
     border-width: 2px;
     border-style: solid;
     border-color: transparent;
-}
+}*/
 
 /* primary toolbar - generic button borders */
 .primary-toolbar .button.raised,
