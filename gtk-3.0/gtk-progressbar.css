@@ -1,0 +1,23 @@
+@define-color progbar_trough_color @theme_bg_selected_color;
+@define-color progbar_color @theme_second_highlight_color;
+
+GtkProgressBar.trough {
+    background-color:@progbar_trough_color;
+    border-radius:4px;
+}
+
+.progressbar{
+	background-color: @progbar_color;
+	border-radius:4px;
+}
+
+.progressbar.pulse,
+.progressbar.pulse:focus {
+	background-image: linear-gradient(to top,
+									  transparent 2px,
+									  white 2px,
+									  white 3px,
+									  @borders 3px,
+									  @borders 5px,
+									  transparent 5px);
+}

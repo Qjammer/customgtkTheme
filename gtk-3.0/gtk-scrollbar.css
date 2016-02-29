@@ -1,15 +1,12 @@
-@define-color scrollbar_trough shade(@theme_bg_color, 0.9);
-@define-color scrollbar_trough_insensitive shade(@theme_bg_color, 0.9);
-@define-color scrollbar_trough_unfocused shade(@theme_unfocused_bg_color, 0.9);
-@define-color scrollbar_slider mix(@scrollbar_trough, @theme_fg_color, 0.35);
-@define-color scrollbar_slider_prelight mix(@scrollbar_trough, @theme_fg_color, 0.5);
-@define-color scrollbar_slider_active @theme_selected_bg_color;
-@define-color scrollbar_slider_insensitive alpha(black, 0); /* FIXME should be transparent */
-@define-color scrollbar_slider_unfocused @theme_unfocused_bg_color;
+@define-color scrollbar_trough @theme_bg_selected_color;
+@define-color scrollbar_trough_insensitive @theme_bg_insensitive_color;
+
+@define-color scrollbar_slider shade(@scrollbar_slider_prelight,0.5);
+@define-color scrollbar_slider_prelight shade(@scrollbar_slider_active,0.5);
+@define-color scrollbar_slider_active @theme_second_highlight_color;
+@define-color scrollbar_slider_insensitive @theme_text_insensitive_color; /* FIXME should be transparent */
 
 .scrollbar {
-	background-image: none;
-	border-style: solid;
 	-GtkRange-trough-border: 0;
 	-GtkScrollbar-has-backward-stepper: false;
 	-GtkScrollbar-has-forward-stepper: false;
@@ -22,13 +19,40 @@
 
 .scrollbars-junction, /* the small square between scrollbars!!! */
 .scrollbar.trough {
-	background-image: none;
 	background-color: @scrollbar_trough;
-	border-width: 0;
-	border-radius: 0;
-	border-image: none;
 }
 
+.scrollbar.trough:insensitive {
+	background-color: @scrollbar_trough_insensitive;
+	border-style: hidden;
+	border-width: 3px;
+}
+
+.scrollbar.slider {
+	background-color: @scrollbar_slider;
+	border-radius: 25px;
+	border-style: solid;
+	border-color: transparent;
+	border-width: 3px;
+}
+
+.scrollbar.slider:hover {
+	transition: 1000ms linear; /* doesn't work */
+	background-color: @scrollbar_slider_prelight;
+}
+
+.scrollbar.slider:prelight:active {
+	background-color: @scrollbar_slider_active;
+}
+
+.scrollbar.slider:insensitive {
+	background-color: @scrollbar_slider_insensitive;
+}
+
+.scrollbar.slider.fine-tune:prelight:active {
+	border-width: 5px;
+}
+/*
 .scrollbar.button,
 .scrollbar.button:active,
 .scrollbar.button:active:hover,
@@ -45,22 +69,6 @@
 .scrollbar.button:active,
 .scrollbar.button:active:hover {
 	background-color: mix(@scrollbar_slider, @scrollbar_trough, 0.8);
-}
-
-.scrollbar.button.top:hover {
-	box-shadow: inset 0 -1px mix(@scrollbar_slider, @scrollbar_trough, 0.8);
-}
-
-.scrollbar.button.bottom:hover {
-	box-shadow: inset 0 1px mix(@scrollbar_slider, @scrollbar_trough, 0.8);
-}
-
-.scrollbar.button.right:hover {
-	box-shadow: inset 1px 0 mix(@scrollbar_slider, @scrollbar_trough, 0.8);
-}
-
-.scrollbar.button.left:hover {
-	box-shadow: inset -1px 0 mix(@scrollbar_slider, @scrollbar_trough, 0.8);
 }
 
 .scrollbar.button.top:hover:backdrop,
@@ -92,83 +100,6 @@
 
 .scrollbar.button:insensitive:backdrop {
 	color: mix(@scrollbar_slider_unfocused, @scrollbar_trough_unfocused, 0.7);
-}
-
-.scrollbar.trough:insensitive {
-	background-color: @scrollbar_trough_insensitive;
-	border-style: solid;
-	border-image: none;
-	border-color: transparent;
-	border-width: 3px;
-}
-
-.scrollbars-junction:backdrop,
-.scrollbar.trough:backdrop {
-	background-image: none;
-	background-color: @scrollbar_trough_unfocused;
-	border-width: 0;
-	border-radius: 0;
-	border-image: none;
-}
-
-.scrollbar.trough:insensitive:backdrop {
-	background-image: none;
-	background-color: mix(@scrollbar_trough_unfocused, @scrollbar_trough_insensitive, 0.5);
-	border-width: 0;
-	border-radius: 0;
-	border-image: none;
-}
+}*/
 
 
-.scrollbar.slider {
-	background-image: none;
-	background-color: @scrollbar_slider;
-	border-radius: 20px;
-	border-style: solid;
-	border-image: none;
-	border-color: transparent;
-	border-width: 3px;
-}
-
-.scrollbar.slider:hover {
-	transition: 1000ms linear; /* doesn't work */
-	background-image: none;
-	background-color: @scrollbar_slider_prelight;
-	border-style: solid;
-	border-image: none;
-	border-color: transparent;
-	border-width: 3px;
-}
-
-.scrollbar.slider:prelight:active {
-	background-image: none;
-	background-color: @scrollbar_slider_active;
-	border-style: solid;
-	border-image: none;
-	border-color: transparent;
-	border-width: 3px;
-}
-
-.scrollbar.slider:insensitive {
-	background-color: @scrollbar_slider_insensitive;
-	border-style: solid;
-	border-image: none;
-	border-color: transparent;
-	border-width: 3px;
-}
-
-.scrollbar.slider:backdrop {
-	background-color: @scrollbar_slider_unfocused;
-	border-style: solid;
-	border-image: none;
-	border-color: transparent;
-	border-width: 3px;
-}
-
-.scrollbar.slider.fine-tune:prelight:active {
-	  background-image: none;
-	  border-style: solid;
-	  border-image: none;
-	  border-color: transparent;
-	  border-width: 5px;
-  }

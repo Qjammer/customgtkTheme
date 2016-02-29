@@ -1,0 +1,28 @@
+.scale.trough {
+	background-color: @theme_bg_selected_color;
+	background-image: none;
+	margin:8px;
+}
+
+.scale.trough.highlight {
+	background-color: @theme_second_highlight_color;
+}
+
+.scale{
+	-GtkScale-slider-length:16px;
+	-GtkRange-slider-width:20px;
+	-GtkRange-trough-border:0;
+}
+
+.scale.slider{/*The dot*/
+	border-radius: 0;
+	border-style: none;
+	background-size: 75%;
+	background-repeat: no-repeat;
+	background-position: center;
+	/* background-image in -assets variant */
+}
+
+.scale.slider.fine-tune:active{
+	background-size: 40%;
+}

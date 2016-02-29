@@ -1,0 +1,108 @@
+@define-color notebook_border_color #00FF00;
+@define-color notebook_bg_color @theme_bg_selected_color;
+
+@define-color notebook_tab_color @theme_bg_color;
+@define-color notebook_tab_selected_color @theme_bg_color;
+
+@define-color notebook_marker_color shade(@theme_base_color,2.0);
+@define-color notebook_marker_checked_color shade(@theme_highlight_color,1.0);
+
+.notebook {
+	padding: 3px;
+
+	background-color: @notebook_bg_color;
+
+	-GtkNotebook-tab-overlap: 5;
+	-GtkNotebook-tab-curvature: 5;
+	/* FIXME - the gap should be applied only to top or bottom tabs */
+	-GtkNotebook-initial-gap: 2;
+}
+
+.notebook GtkViewport {
+	/*background-color: @theme_base_color;*/
+}
+
+.notebook tab {
+	border-style: solid;
+	border-bottom-style: solid;
+	border-width:2px;
+	border-radius: 4px;
+	background-color: @theme_bg_color;
+	border-color: @notebook_marker_color;
+}
+
+.notebook tab:active {
+	background-color: @notebook_bg_color;
+	border-color: @notebook_marker_checked_color;
+}
+
+.notebook tab.top {
+	padding: 4px 2px 0;
+	border-bottom-width: 0;
+}
+.notebook tab.bottom {
+	padding: 0 2px 4px;
+	border-top-width: 0;
+}
+
+.notebook tab.top:active {
+	padding: 8px 2px 0;
+}
+
+.notebook tab.bottom:active {
+	padding: 0 2px 8px;
+}
+
+
+.notebook tab.left {
+	padding: 2px;
+	border-right-width: 0;
+}
+
+.notebook tab.right {
+	padding: 2px;
+	border-left-width: 0;
+}
+
+
+.notebook tab.left:active {
+	padding: 2px 2px 2px 6px;
+}
+
+.notebook tab.right:active {
+	padding: 2px 6px 2px 2px;
+}
+
+/* close button styling */
+.notebook tab .button,
+.notebook tab .button:active,
+.notebook tab .button:hover {
+	background-color: transparent;
+	border-radius: 3px;
+	color: mix(@theme_fg_color, @theme_base_color, 0.6);
+	border-style: solid;
+	border-color: transparent;
+	border-width: 1px;
+	padding: 1px;
+	icon-shadow: 0 1px @button_text_shadow;
+}
+
+
+.notebook tab .button:hover {
+	color: @theme_fg_color;
+	border-color: alpha(black, 0.1);
+}
+
+.notebook tab .button:active,
+.notebook tab .button:active:hover {
+	background-color: alpha(black, 0.08);
+	box-shadow: inset 0 1px alpha(black, 0.05);
+	color:  @button_active_text;
+	icon-shadow: 0 1px @button_active_text_shadow;
+
+	border-color: alpha(black, 0.27)
+				  alpha(black, 0.13)
+				  alpha(black, 0.13)
+				  alpha(black, 0.13);
+}
+
