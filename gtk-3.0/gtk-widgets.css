@@ -1828,7 +1828,7 @@ EggListBox:selected {
 }
 
 .list-row:hover {
-	background-color: @content_view_bg;
+	/*background-color: @content_view_bg;*/
 }
 
 .list-row:selected {
