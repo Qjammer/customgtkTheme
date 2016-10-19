@@ -24,27 +24,15 @@ TerminalWindow GtkNotebook.notebook {
     border-left-width: 0;
 }
 
-/* nautilus */
-
 @import url("gnome-applications/gtk-nautilus.css");
-
-/* gedit */
 
 @import url("gnome-applications/gtk-gedit.css");
 
-/* gnome-documents */
-
 @import url("gnome-applications/gtk-documents.css");
-
-/* baobab */
 
 @import url("gnome-applications/gtk-baobab.css");
 
-/* epiphany */
-
 @import url("gnome-applications/gtk-epiphany.css");
-
-/* Gnome Contacts */
 
 @import url("gnome-applications/gtk-contacts.css");
 
@@ -55,6 +43,7 @@ TerminalWindow GtkNotebook.notebook {
 }
 
 /* Gucharmap */
+
 GucharmapChartable:active,
 GucharmapChartable:focus,
 GucharmapChartable:selected {

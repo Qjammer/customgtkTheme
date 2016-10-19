@@ -1,5 +1,5 @@
 * {
-	engine: adwaita;
+	/*engine: adwaita;*/
 	/*padding: 0;*/
 
 	background-clip: padding-box;/*Margin of background image/color*/
@@ -140,33 +140,35 @@ GtkLabel:insensitive {
  * Miscellaneous *
  *****************/
 
-@import url("gtk-spinner.css");
+@import url("gtk-widgets/gtk-spinner.css");
 
-@import url("gtk-floating-bar.css");
+@import url("gtk-widgets/gtk-floating-bar.css");
 
-@import url("gtk-toolbar.css");
+@import url("gtk-widgets/gtk-toolbar.css");
 
-@import url("gtk-progressbar.css");
+@import url("gtk-widgets/gtk-progressbar.css");
 
-@import url("gtk-scale.css");
+@import url("gtk-widgets/gtk-scale.css");
 
-@import url("gtk-spinbutton.css");
+@import url("gtk-widgets/gtk-spinbutton.css");
 
-@import url("gtk-entry.css");
+@import url("gtk-widgets/gtk-entry.css");
 
-@import url("gtk-buttons.css");
+@import url("gtk-widgets/gtk-buttons.css");
 
-@import url("gtk-scrollbar.css");
+@import url("gtk-widgets/gtk-scrollbar.css");
 
 @import url("gtk-widgets/gtk-menu.css");
 
-@import url("gtk-toolbar.css");
+@import url("gtk-widgets/gtk-toolbar.css");
 
-@import url("gtk-gtkswitch.css");
+@import url("gtk-widgets/gtk-gtkswitch.css");
 
-@import url("gtk-titlebar.css");
+@import url("gtk-widgets/gtk-titlebar.css");
 
-@import url("gtk-notebook.css");
+@import url("gtk-widgets/gtk-notebook.css");
+
+@import url("gtk-widgets/gtk-gtkcolorswatch.css");
 
 .content-view.view.rubberband,
 .view.rubberband,
@@ -1839,27 +1841,24 @@ EggListBox:selected {
  * Content view *
  ****************/
 .content-view.view {
-	background-color: @content_view_bg;
+	background-color: @theme_bg_color;
 }
 
 .content-view.view:insensitive {
-	background-color: @theme_unfocused_base_color;
-	background-image: none;
+	/*background-color: @theme_unfocused_base_color;*/
+	background-image:none;
 }
 
 .content-view.view:backdrop {
-	background-color: @sidebar_bg_unfocused;
-	background-image: none;
+	/*background-color: @sidebar_bg_unfocused;*/
 }
 
 .content-view.view:selected {
-	background-color: @theme_selected_bg_color;
-	background-image: none;
+	/*background-color: @theme_selected_bg_color;*/
 }
 
 .content-view.view:selected:backdrop {
-	background-color: @theme_unfocused_selected_bg_color;
-	background-image: none;
+	/*background-color: @theme_unfocused_selected_bg_color;*/
 }
 
 /* FIXME: EggListBox should set the .cell style class on
@@ -2262,5 +2261,3 @@ GsmFailWhaleDialog .button:active {
 	border-color: @borders;
 	border-width: 1px;
 }
-
-

@@ -1,6 +1,14 @@
 # Bridge | ScionicSpectre
 
-gtk-color-scheme	= "base_color:#FFFFFF\nfg_color:#000000\ntooltip_fg_color:#FFFFFF\nselected_bg_color:#4A90D9\nselected_fg_color:#FFFFFF\ntext_color:#313739\nbg_color:#EDEDED\ninsensitive_bg_color:#F4F4F2\ntooltip_bg_color:#343434"
+gtk-color-scheme	= "base_color:#FFFFFF
+fg_color:#000000
+tooltip_fg_color:#FFFFFF
+selected_bg_color:#4A90D9
+selected_fg_color:#FFFFFF
+text_color:#313739
+bg_color:#EDEDED
+insensitive_bg_color:#F4F4F2
+tooltip_bg_color:#343434"
 
 gtk-auto-mnemonics              = 1
 gtk-primary-button-warps-slider = 1
@@ -38,7 +46,7 @@ style "default"
 	GtkRange::stepper-size		= 0
 
 	GtkScrollbar::activate-slider	                = 1
-	GtkScrollbar::has-backward-stepper		= 0  
+	GtkScrollbar::has-backward-stepper		= 0
 	GtkScrollbar::has-forward-stepper		= 0
         GtkScrollbar::min-slider-length                 = 42
 	GtkScrolledWindow::scrollbar-spacing		= 0
@@ -101,7 +109,7 @@ style "default"
 
 	# Check Buttons
 
-	image 
+	image
 	{
             function        		= CHECK
             recolorable     		= TRUE
@@ -110,7 +118,7 @@ style "default"
             overlay_file    		= "Check-Radio/checkbox-unchecked.png"
             overlay_stretch 		= FALSE
         }
-	image 
+	image
 	{
             function        		= CHECK
             recolorable     		= TRUE
@@ -119,7 +127,7 @@ style "default"
             overlay_file    		= "Check-Radio/checkbox-unchecked.png"
             overlay_stretch 		= FALSE
         }
-	image 
+	image
 	{
             function        		= CHECK
             recolorable     		= TRUE
@@ -137,7 +145,7 @@ style "default"
             overlay_file    		= "Check-Radio/checkbox-unchecked.png"
             overlay_stretch 		= FALSE
         }
-	image 
+	image
 	{
             function        		= CHECK
             recolorable     		= TRUE
@@ -146,7 +154,7 @@ style "default"
             overlay_file    		= "Check-Radio/checkbox-unchecked-insensitive.png"
             overlay_stretch 		= FALSE
         }
-	image 
+	image
 	{
             function        		= CHECK
             recolorable     		= TRUE
@@ -155,7 +163,7 @@ style "default"
             overlay_file    		= "Check-Radio/checkbox-checked.png"
             overlay_stretch	 	= FALSE
         }
-	image 
+	image
 	{
             function        		= CHECK
             recolorable     		= TRUE
@@ -164,7 +172,7 @@ style "default"
             overlay_file    		= "Check-Radio/checkbox-checked.png"
             overlay_stretch 		= FALSE
         }
-	image 
+	image
 	{
             function        		= CHECK
             recolorable     		= TRUE
@@ -182,7 +190,7 @@ style "default"
             overlay_file    		= "Check-Radio/checkbox-checked.png"
             overlay_stretch 		= FALSE
         }
-	image 
+	image
   	{
             function        		= CHECK
             recolorable     		= TRUE
@@ -194,7 +202,7 @@ style "default"
 
 	# Radio Buttons
 
-	image 
+	image
 	{
             function        		= OPTION
             state 			= NORMAL
@@ -202,7 +210,7 @@ style "default"
             overlay_file    		= "Check-Radio/option-unchecked.png"
             overlay_stretch 		= FALSE
         }
-	image 
+	image
 	{
             function        		= OPTION
             state 			= PRELIGHT
@@ -210,7 +218,7 @@ style "default"
             overlay_file    		= "Check-Radio/option-unchecked.png"
             overlay_stretch 		= FALSE
         }
-	image 
+	image
 	{
             function        		= OPTION
             state 			= ACTIVE
@@ -226,7 +234,7 @@ style "default"
             overlay_file    		= "Check-Radio/option-unchecked.png"
             overlay_stretch 		= FALSE
         }
-	image 
+	image
 	{
             function        		= OPTION
             state 			= INSENSITIVE
@@ -234,7 +242,7 @@ style "default"
             overlay_file    		= "Check-Radio/option-unchecked-insensitive.png"
             overlay_stretch 		= FALSE
         }
-	image 
+	image
 	{
             function        		= OPTION
 	    state 			= NORMAL
@@ -242,7 +250,7 @@ style "default"
             overlay_file    		= "Check-Radio/option-checked.png"
             overlay_stretch 		= FALSE
         }
- 	image 
+ 	image
 	{
             function        		= OPTION
 	    state			= PRELIGHT
@@ -250,7 +258,7 @@ style "default"
             overlay_file    		= "Check-Radio/option-checked.png"
             overlay_stretch 		= FALSE
         }
-	image 
+	image
 	{
             function        		= OPTION
 	    state			= ACTIVE
@@ -266,7 +274,7 @@ style "default"
             overlay_file    		= "Check-Radio/option-checked.png"
             overlay_stretch	 	= FALSE
         }
-	image 
+	image
 	{
             function        		= OPTION
 	    state 			= INSENSITIVE
@@ -469,7 +477,7 @@ style "default"
 
 	# Focuslines
 
-	image 
+	image
 	{
 	    function                    = FOCUS
 	    file			= "Others/focus.png"
@@ -529,7 +537,7 @@ style "default"
 	    function                    = RESIZE_GRIP
 	    state		        = NORMAL
 	    detail		        = "statusbar"
-	    overlay_file	        = "Others/null.png"	
+	    overlay_file	        = "Others/null.png"
 	    overlay_border	        = { 0,0,0,0 }
 	    overlay_stretch             = FALSE
 	}
@@ -543,7 +551,7 @@ style "default"
             border			= { 4, 4, 4, 4 }
             stretch			= TRUE
         }
-  
+
         }
 }
 
@@ -563,9 +571,9 @@ style "ooo_stepper_hack"
 
 style "scrollbar"
 {
-  engine "pixmap" 
+  engine "pixmap"
   {
-    image 
+    image
     {
       function			= BOX
       detail			= "trough"
@@ -574,7 +582,7 @@ style "scrollbar"
       stretch			= TRUE
       orientation		= HORIZONTAL
     }
-    image 
+    image
     {
       function			= BOX
       detail			= "trough"
@@ -586,37 +594,37 @@ style "scrollbar"
 
 # Sliders
 
-    image 
+    image
     {
       function				= SLIDER
       state           			= NORMAL
-      file				= "Scrollbars/slider-horiz.png" 
+      file				= "Scrollbars/slider-horiz.png"
       border				= { 7, 7, 5, 5 }
       stretch				= TRUE
       orientation			= HORIZONTAL
 
     }
-    image 
+    image
     {
       function				= SLIDER
       state           			= ACTIVE
-      file				= "Scrollbars/slider-horiz-active.png" 
+      file				= "Scrollbars/slider-horiz-active.png"
       border				= { 7, 7, 5, 5 }
       stretch				= TRUE
       orientation			= HORIZONTAL
 
     }
-    image 
+    image
     {
       function				= SLIDER
       state           			= PRELIGHT
-      file				= "Scrollbars/slider-horiz-prelight.png" 
+      file				= "Scrollbars/slider-horiz-prelight.png"
       border				= { 7, 7, 5, 5 }
       stretch				= TRUE
       orientation			= HORIZONTAL
 
     }
-    image 
+    image
     {
       function				= SLIDER
       state           			= INSENSITIVE
@@ -628,37 +636,37 @@ style "scrollbar"
 
 # X Verticals
 
-    image 
+    image
     {
       function				= SLIDER
       state           			= NORMAL
-      file				= "Scrollbars/slider-vert.png" 
+      file				= "Scrollbars/slider-vert.png"
       border				= { 5, 5, 7, 7 }
       stretch				= TRUE
       orientation			= VERTICAL
 
     }
-    image 
+    image
     {
       function				= SLIDER
       state           			= ACTIVE
-      file				= "Scrollbars/slider-vert-active.png" 
+      file				= "Scrollbars/slider-vert-active.png"
       border				= { 5, 5, 7, 7 }
       stretch				= TRUE
       orientation			= VERTICAL
 
     }
-    image 
+    image
     {
       function				= SLIDER
       state           			= PRELIGHT
-      file				= "Scrollbars/slider-vert-prelight.png" 
+      file				= "Scrollbars/slider-vert-prelight.png"
       border				= { 5, 5, 7, 7 }
       stretch				= TRUE
       orientation			= VERTICAL
 
     }
-    image 
+    image
     {
       function				= SLIDER
       state           			= INSENSITIVE
@@ -748,7 +756,7 @@ style "menu_item"
 
 	# Check Buttons
 
-	image 
+	image
 	{
             function        		= CHECK
             recolorable     		= TRUE
@@ -757,7 +765,7 @@ style "menu_item"
             overlay_file    		= "Others/null.png"
             overlay_stretch 		= FALSE
         }
-	image 
+	image
 	{
             function        		= CHECK
             recolorable     		= TRUE
@@ -766,7 +774,7 @@ style "menu_item"
             overlay_file    		= "Others/null.png"
             overlay_stretch 		= FALSE
         }
-	image 
+	image
 	{
             function        		= CHECK
             recolorable     		= TRUE
@@ -775,7 +783,7 @@ style "menu_item"
             overlay_file    		= "Others/null.png"
             overlay_stretch 		= FALSE
         }
-	image 
+	image
 	{
             function        		= CHECK
             recolorable     		= TRUE
@@ -784,7 +792,7 @@ style "menu_item"
             overlay_file    		= "Others/null.png"
             overlay_stretch 		= FALSE
         }
-	image 
+	image
 	{
             function        		= CHECK
             recolorable     		= TRUE
@@ -793,7 +801,7 @@ style "menu_item"
             overlay_file    		= "Check-Radio/menucheck.png"
             overlay_stretch	 	= FALSE
         }
-	image 
+	image
 	{
             function        		= CHECK
             recolorable     		= TRUE
@@ -802,7 +810,7 @@ style "menu_item"
             overlay_file    		= "Check-Radio/menucheck_prelight.png"
             overlay_stretch 		= FALSE
         }
-	image 
+	image
 	{
             function        		= CHECK
             recolorable     		= TRUE
@@ -811,7 +819,7 @@ style "menu_item"
             overlay_file    		= "Check-Radio/menucheck.png"
             overlay_stretch 		= FALSE
         }
-	image 
+	image
   	{
  	    function        		= CHECK
    	    recolorable     		= TRUE
@@ -823,7 +831,7 @@ style "menu_item"
 
 	# Radio Buttons
 
-	image 
+	image
 	{
             function        		= OPTION
             state 			= NORMAL
@@ -831,7 +839,7 @@ style "menu_item"
             overlay_file    		= "Others/null.png"
             overlay_stretch 		= FALSE
         }
-	image 
+	image
 	{
             function        		= OPTION
             state 			= PRELIGHT
@@ -839,7 +847,7 @@ style "menu_item"
             overlay_file    		= "Others/null.png"
             overlay_stretch 		= FALSE
         }
-	image 
+	image
 	{
             function        		= OPTION
             state 			= ACTIVE
@@ -847,7 +855,7 @@ style "menu_item"
             overlay_file    		= "Others/null.png"
             overlay_stretch 		= FALSE
         }
-	image 
+	image
 	{
             function        		= OPTION
             state 			= INSENSITIVE
@@ -855,7 +863,7 @@ style "menu_item"
             overlay_file    		= "Others/null.png"
             overlay_stretch 		= FALSE
         }
-	image 
+	image
 	{
             function        		= OPTION
 	    state 			= NORMAL
@@ -863,7 +871,7 @@ style "menu_item"
             overlay_file    		= "Check-Radio/menuoption.png"
             overlay_stretch 		= FALSE
         }
- 	image 
+ 	image
 	{
             function        		= OPTION
 	    state			= PRELIGHT
@@ -871,7 +879,7 @@ style "menu_item"
             overlay_file    		= "Check-Radio/menuoption_prelight.png"
             overlay_stretch 		= FALSE
         }
-	image 
+	image
 	{
             function        		= OPTION
 	    state			= ACTIVE
@@ -879,7 +887,7 @@ style "menu_item"
             overlay_file    		= "Check-Radio/menuoption.png"
             overlay_stretch	 	= FALSE
         }
-	image 
+	image
 	{
             function        		= OPTION
 	    state 			= INSENSITIVE
@@ -887,7 +895,7 @@ style "menu_item"
             overlay_file    		= "Others/null.png"
             overlay_stretch 		= FALSE
         }
-	image 
+	image
       	{
             function                    = SHADOW # This fixes boxy Qt menu items
 	    file        		= "Others/null.png"
@@ -956,8 +964,8 @@ style "button"
       file			= "Buttons/button-pressed.png"
       border			= { 4, 4, 4, 4 }
       stretch			= TRUE
-    }	
-    image 
+    }
+    image
     {
       function			= BOX
       state			= INSENSITIVE
@@ -1750,9 +1758,9 @@ style "notebook"
   xthickness	= 5
   ythickness	= 2
 
-  engine "pixmap" 
+  engine "pixmap"
   {
-    image 
+    image
     {
         function		= EXTENSION
 	state			= ACTIVE
@@ -1761,7 +1769,7 @@ style "notebook"
 	stretch			= TRUE
 	gap_side		= TOP
     }
-    image 
+    image
     {
         function		= EXTENSION
 	state			= ACTIVE
@@ -1770,7 +1778,7 @@ style "notebook"
 	stretch			= TRUE
 	gap_side		= BOTTOM
     }
-    image 
+    image
     {
         function		= EXTENSION
 	state			= ACTIVE
@@ -1779,7 +1787,7 @@ style "notebook"
 	stretch			= TRUE
 	gap_side		= RIGHT
     }
-    image 
+    image
     {
         function		= EXTENSION
 	state			= ACTIVE
@@ -1787,8 +1795,8 @@ style "notebook"
 	border			= { 3,3,3,3 }
 	stretch			= TRUE
 	gap_side		= LEFT
-    }	
-    image 
+    }
+    image
     {
         function		= EXTENSION
 	file			= "Tabs/tab-top-active.png"
@@ -1796,7 +1804,7 @@ style "notebook"
 	stretch			= TRUE
 	gap_side		= BOTTOM
     }
-    image 
+    image
     {
         function		= EXTENSION
 	file			= "Tabs/tab-bottom-active.png"
@@ -1804,7 +1812,7 @@ style "notebook"
 	stretch			= TRUE
 	gap_side		= TOP
     }
-    image 
+    image
     {
         function		= EXTENSION
 	file			= "Tabs/tab-left-active.png"
@@ -1823,17 +1831,17 @@ style "notebook"
 
 # How to draw boxes with a gap on one side (ie the page of a notebook)
 
-    image 
+    image
     {
         function			= BOX_GAP
-	file				= "Tabs/notebook.png" 
+	file				= "Tabs/notebook.png"
 	border				= { 4, 4, 4, 4 }
 	stretch				= TRUE
 	gap_file			= "Tabs/notebook-gap-horiz.png"
 	gap_border     			= { 1, 1, 0, 0 }
 	gap_side			= TOP
     }
-    image 
+    image
     {
         function			= BOX_GAP
 	file				= "Tabs/notebook.png"
@@ -1843,7 +1851,7 @@ style "notebook"
 	gap_border			= { 1, 1, 0, 0 }
 	gap_side			= BOTTOM
     }
-    image 
+    image
     {
         function			= BOX_GAP
 	file				= "Tabs/notebook.png"
@@ -1853,10 +1861,10 @@ style "notebook"
 	gap_border			= { 0, 0, 1, 1 }
 	gap_side			= LEFT
     }
-    image 
+    image
     {
         function			= BOX_GAP
-	file				= "Tabs/notebook.png" 
+	file				= "Tabs/notebook.png"
 	border				= { 4, 4, 4, 4 }
 	stretch				= TRUE
 	gap_file			= "Tabs/notebook-gap-vert.png"
@@ -1866,7 +1874,7 @@ style "notebook"
 
 # How to draw the box of a notebook when it isnt attached to a tab
 
-    image 
+    image
     {
 	function		= BOX
 	file			= "Tabs/notebook.png"
@@ -1921,10 +1929,10 @@ style "combobox_button"
 }
 
 style "range"
-{	
-  engine "pixmap" 
+{
+  engine "pixmap"
   {
-    image 
+    image
     {
       function			= BOX
       detail			= "trough"
@@ -1932,8 +1940,8 @@ style "range"
       border			= { 4, 4, 0, 0 }
       stretch			= TRUE
       orientation		= HORIZONTAL
-    }	
-    image 
+    }
+    image
     {
       function			= BOX
       detail			= "trough"
@@ -1945,7 +1953,7 @@ style "range"
 
     # Horizontal
 
-    image 
+    image
     {
       function				= SLIDER
       state           			= NORMAL
@@ -1956,7 +1964,7 @@ style "range"
       overlay_stretch			= FALSE
       orientation			= HORIZONTAL
     }
-    image 
+    image
     {
       function				= SLIDER
       state           			= PRELIGHT
@@ -1967,7 +1975,7 @@ style "range"
       overlay_stretch			= FALSE
       orientation			= HORIZONTAL
     }
-    image 
+    image
     {
       function				= SLIDER
       state           			= INSENSITIVE
@@ -1981,7 +1989,7 @@ style "range"
 
     # Vertical
 
-    image 
+    image
     {
       function				= SLIDER
       state           			= NORMAL
@@ -1992,7 +2000,7 @@ style "range"
       overlay_stretch			= FALSE
       orientation			= VERTICAL
     }
-    image 
+    image
     {
       function				= SLIDER
       state           			= PRELIGHT
@@ -2003,7 +2011,7 @@ style "range"
       overlay_stretch			= FALSE
       orientation			= VERTICAL
     }
-    image 
+    image
     {
       function				= SLIDER
       state           			= INSENSITIVE
@@ -2016,7 +2024,7 @@ style "range"
     }
 
     # Function below removes ugly boxes
-    image 
+    image
     {
        	function		= BOX
 	file        		= "Others/null.png"
@@ -2032,7 +2040,7 @@ style "progressbar"
   xthickness            		= 1
   ythickness            		= 1
 
-  engine "pixmap" 
+  engine "pixmap"
   {
     image
     {
@@ -2073,11 +2081,11 @@ style "progressbar"
   }
 }
 
-style "separator_menu_item" 
+style "separator_menu_item"
 {
 	engine "pixmap"
 	{
-	image 
+	image
       	{
                 function		= BOX
 		file        		= "Lines/menu_line_h.png"
@@ -2097,7 +2105,7 @@ style "treeview_header"
 
 	engine "pixmap"
 	{
-	image 
+	image
       	{
         	function		= BOX
 		file        		= "Others/tree_header.png"
@@ -2117,7 +2125,7 @@ style "scrolled_window"
         image
         {
                 function		= SHADOW
-                file			= "Shadows/frame.png"				
+                file			= "Shadows/frame.png"
                 border			= { 5, 5, 5, 5 }
                 stretch			= TRUE
         }
